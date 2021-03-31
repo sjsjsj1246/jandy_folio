@@ -12,29 +12,29 @@ type NavProps = {
 const Nav = ({ classes }: NavProps) => {
   const [position, setPosition] = useState(0);
   return (
-    <Paper>
-      <Tabs
-        value={position}
-        onChange={(e: ChangeEvent<{}>, next: any) => {
-          setPosition(next);
-        }}
-        textColor="inherit"
-        variant="standard"
-        aria-label="nav tabs"
-        css={[navStyle]}
-        classes={{ indicator: classes.indicator }}
-      >
-        <Tab label="HOME"></Tab>
-        <Tab label="ABOUT"></Tab>
-        <Tab label="PROTFOLIO"></Tab>
-      </Tabs>
-    </Paper>
+    <Tabs
+      value={position}
+      onChange={(e: ChangeEvent<{}>, next: any) => {
+        setPosition(next);
+      }}
+      textColor="inherit"
+      variant="standard"
+      aria-label="nav tabs"
+      css={[navStyle]}
+      classes={{ indicator: classes.indicator }}
+    >
+      <Tab label="HOME"></Tab>
+      <Tab label="ABOUT"></Tab>
+      <Tab label="PORTFOLIO"></Tab>
+      <Tab label="CONTACT"></Tab>
+    </Tabs>
   );
 };
 
 const navStyle = css`
   background-color: black;
   color: white;
+  height: 5vh;
 `;
 
 const TabsStyles = {
