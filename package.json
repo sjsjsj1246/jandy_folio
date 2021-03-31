@@ -2,7 +2,7 @@
   "name": "jandy-folio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hisfolio.herokuapp.com//",
+  "homepage": "https://hisfolio.herokuapp.com/",
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.1.5",
@@ -28,9 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [

@@ -37,10 +37,10 @@ const navStyle = css`
   color: white;
 `;
 
-const styles = {
+const TabsStyles = {
   indicator: {
     backgroundColor: "white",
   },
 };
 
-export default withStyles(styles)(Nav);
+export default withStyles(TabsStyles)(Nav);
