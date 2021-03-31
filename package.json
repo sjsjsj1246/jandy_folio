@@ -2,7 +2,7 @@
   "name": "jandy-folio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sjsjsj1246.github.io/todo_list_for_react_seminar/",
+  "homepage": "https://hisfolio.herokuapp.com//",
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.1.5",
