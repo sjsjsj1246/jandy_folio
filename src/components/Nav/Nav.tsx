@@ -2,15 +2,56 @@
 import { jsx, css } from "@emotion/react";
 import { Paper, Tab, Tabs, TabsClassKey } from "@material-ui/core";
 import { ClassNameMap, withStyles } from "@material-ui/styles";
-import React, { ChangeEvent, ReactNode, useState } from "react";
+import React, { ChangeEvent, ReactNode, useEffect, useState } from "react";
 
 type NavProps = {
-  /**Navigation 커스텀 스타일입니다.. */
   classes: Partial<ClassNameMap<TabsClassKey>>;
+  homeRef?: React.RefObject<HTMLDivElement>;
+  aboutRef?: React.RefObject<HTMLDivElement>;
+  portfolioRef?: React.RefObject<HTMLDivElement>;
+  contactRef?: React.RefObject<HTMLDivElement>;
 };
 
-const Nav = ({ classes }: NavProps) => {
+const Nav = ({
+  classes,
+  homeRef,
+  aboutRef,
+  portfolioRef,
+  contactRef,
+}: NavProps) => {
   const [position, setPosition] = useState(0);
+  const handleScroll: EventListenerOrEventListenerObject = () => {
+    const currentScrollPosition = window.pageYOffset;
+    const homePosition =
+      currentScrollPosition +
+      (homeRef?.current?.getBoundingClientRect().top || 2700);
+    const aboutPosition =
+      currentScrollPosition +
+      (aboutRef?.current?.getBoundingClientRect().top || 2700);
+    const portfolioPosition =
+      currentScrollPosition +
+      (portfolioRef?.current?.getBoundingClientRect().top || 2700);
+    const contactPosition =
+      currentScrollPosition +
+      (contactRef?.current?.getBoundingClientRect().top || 2700);
+
+    console.log("scroll : " + currentScrollPosition);
+    console.log("home : " + homePosition);
+    console.log("about : " + aboutPosition);
+    console.log("portfolio : " + portfolioPosition);
+    console.log("contact : " + contactPosition);
+    if (currentScrollPosition >= homePosition) setPosition(0);
+    if (currentScrollPosition >= aboutPosition - 50) setPosition(1);
+    if (currentScrollPosition >= portfolioPosition - 50) setPosition(2);
+    if (currentScrollPosition >= contactPosition - 50) setPosition(3);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Tabs
       value={position}
@@ -20,26 +61,54 @@ const Nav = ({ classes }: NavProps) => {
       textColor="inherit"
       variant="standard"
       aria-label="nav tabs"
-      css={[navStyle]}
+      css={[navStyle, position && navTopStyle]}
       classes={{ indicator: classes.indicator }}
     >
-      <Tab label="HOME"></Tab>
-      <Tab label="ABOUT"></Tab>
-      <Tab label="PORTFOLIO"></Tab>
-      <Tab label="CONTACT"></Tab>
+      <Tab
+        label="HOME"
+        onClick={() => {
+          homeRef?.current?.scrollIntoView();
+        }}
+      ></Tab>
+      <Tab
+        label="ABOUT"
+        onClick={() => {
+          aboutRef?.current?.scrollIntoView();
+        }}
+      ></Tab>
+      <Tab
+        label="PORTFOLIO"
+        onClick={() => {
+          portfolioRef?.current?.scrollIntoView();
+        }}
+      ></Tab>
+      <Tab
+        label="CONTACT"
+        onClick={() => {
+          contactRef?.current?.scrollIntoView();
+        }}
+      ></Tab>
     </Tabs>
   );
 };
 
 const navStyle = css`
-  background-color: black;
+  background-color: #403a3a;
   color: white;
   height: 5vh;
 `;
 
+const navTopStyle = css`
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+`;
+
 const TabsStyles = {
   indicator: {
-    backgroundColor: "white",
+    backgroundColor: "#403a3a",
   },
 };
 

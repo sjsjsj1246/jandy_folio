@@ -3,7 +3,7 @@ import { jsx, css } from "@emotion/react";
 
 const About = () => {
   return (
-    <div css={style}>
+    <div id="About" css={style}>
       <h1>About</h1>
     </div>
   );
