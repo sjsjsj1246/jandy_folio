@@ -19,8 +19,7 @@ const Home = ({ title, imgUrl }: HomeProps) => {
 };
 Home.defaultProps = {
   title: "세상에 가치를 더하는 코드를 만듭니다.",
-  imgUrl:
-    "https://pixabay.com/get/gd6c17533059d350f55a55614b61015172733f2d67e885e690f8d688a58e1e466d202115f556752470ee21d0e864020c3_1920.jpg",
+  imgUrl: "https://i.postimg.cc/KvscQh2j/coding-924920-1920.jpg",
 };
 const style = css`
   width: 100%;
