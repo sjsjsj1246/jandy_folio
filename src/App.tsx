@@ -1,11 +1,10 @@
-import React, { LegacyRef, useRef } from "react";
-import logo from "./logo.svg";
+import React, { useRef } from "react";
 import "./App.css";
-import Nav from "./components/Nav/Nav";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Contact from "./components/Contact/Contact";
+import Nav from "./container/Nav/Nav";
+import Home from "./container/Home/Home";
+import About from "./container/About/About";
+import Portfolio from "./container/Portfolio/Portfolio";
+import Contact from "./container/Contact/Contact";
 
 function App() {
   const homeRef = useRef<HTMLDivElement>(null);

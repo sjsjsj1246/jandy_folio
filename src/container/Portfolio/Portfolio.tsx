@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from "@emotion/react";
 
-const Contact = () => {
+const Portfolio = () => {
   return (
     <div css={style}>
-      <h1>Contact</h1>
+      <h1>PortFolio</h1>
     </div>
   );
 };
@@ -13,7 +13,7 @@ const style = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #d9d9d9;
+  background-color: white;
   width: 100%;
   height: 100vh;
   h1 {
@@ -21,4 +21,4 @@ const style = css`
   }
 `;
 
-export default Contact;
+export default Portfolio;

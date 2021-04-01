@@ -2,7 +2,6 @@
 import { jsx, css } from "@emotion/react";
 import "fontsource-noto-sans-kr";
 import "fontsource-roboto";
-import { LegacyRef, MutableRefObject, useRef } from "react";
 
 type HomeProps = {
   title: string;
@@ -39,10 +38,9 @@ const style = css`
   }
   h1 {
     margin: 0;
-    font-family: "Noto Sans KR", sans-serif;
     font-size: 6rem;
     letter-spacing: 0.5rem;
-    color: #e3ecfc;
+    color: #f6f5ff;
     text-shadow: 1px 1px 2px #53565c;
     position: absolute;
     left: 4%;
