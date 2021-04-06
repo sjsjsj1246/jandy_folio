@@ -6,9 +6,11 @@
 
 ## Skill
 
-- Typescript
-- React
-- StoryBook
+- 언어 : Typescript
+- 라이브러리 :
+  - React
+  - emotion
+- 디자인 시스템 : StoryBook
 
 ## Hosting
 

@@ -24,16 +24,16 @@ const Nav = ({
     const currentScrollPosition = window.pageYOffset;
     const homePosition =
       currentScrollPosition +
-      (homeRef?.current?.getBoundingClientRect().top || 2700);
+      (homeRef?.current?.getBoundingClientRect().top || 0);
     const aboutPosition =
       currentScrollPosition +
-      (aboutRef?.current?.getBoundingClientRect().top || 2700);
+      (aboutRef?.current?.getBoundingClientRect().top || 0);
     const portfolioPosition =
       currentScrollPosition +
-      (portfolioRef?.current?.getBoundingClientRect().top || 2700);
+      (portfolioRef?.current?.getBoundingClientRect().top || 0);
     const contactPosition =
       currentScrollPosition +
-      (contactRef?.current?.getBoundingClientRect().top || 2700);
+      (contactRef?.current?.getBoundingClientRect().top || 0);
 
     console.log("scroll : " + currentScrollPosition);
     console.log("home : " + homePosition);
