@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/jandy_folio/static/css/main.b12e2c60.chunk.css",
-    "main.js": "/jandy_folio/static/js/main.cd81760b.chunk.js",
-    "main.js.map": "/jandy_folio/static/js/main.cd81760b.chunk.js.map",
+    "main.css": "/jandy_folio/static/css/main.067a2b8c.chunk.css",
+    "main.js": "/jandy_folio/static/js/main.8f296c90.chunk.js",
+    "main.js.map": "/jandy_folio/static/js/main.8f296c90.chunk.js.map",
     "runtime-main.js": "/jandy_folio/static/js/runtime-main.c73649e8.js",
     "runtime-main.js.map": "/jandy_folio/static/js/runtime-main.c73649e8.js.map",
     "static/css/2.056f10b1.chunk.css": "/jandy_folio/static/css/2.056f10b1.chunk.css",
-    "static/js/2.24e8ac63.chunk.js": "/jandy_folio/static/js/2.24e8ac63.chunk.js",
-    "static/js/2.24e8ac63.chunk.js.map": "/jandy_folio/static/js/2.24e8ac63.chunk.js.map",
+    "static/js/2.ee6d67e9.chunk.js": "/jandy_folio/static/js/2.ee6d67e9.chunk.js",
+    "static/js/2.ee6d67e9.chunk.js.map": "/jandy_folio/static/js/2.ee6d67e9.chunk.js.map",
     "index.html": "/jandy_folio/index.html",
     "static/css/2.056f10b1.chunk.css.map": "/jandy_folio/static/css/2.056f10b1.chunk.css.map",
-    "static/css/main.b12e2c60.chunk.css.map": "/jandy_folio/static/css/main.b12e2c60.chunk.css.map",
-    "static/js/2.24e8ac63.chunk.js.LICENSE.txt": "/jandy_folio/static/js/2.24e8ac63.chunk.js.LICENSE.txt",
+    "static/css/main.067a2b8c.chunk.css.map": "/jandy_folio/static/css/main.067a2b8c.chunk.css.map",
+    "static/js/2.ee6d67e9.chunk.js.LICENSE.txt": "/jandy_folio/static/js/2.ee6d67e9.chunk.js.LICENSE.txt",
     "static/media/index.css": "/jandy_folio/static/media/roboto-vietnamese-400-normal.52cebac0.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.c73649e8.js",
     "static/css/2.056f10b1.chunk.css",
-    "static/js/2.24e8ac63.chunk.js",
-    "static/css/main.b12e2c60.chunk.css",
-    "static/js/main.cd81760b.chunk.js"
+    "static/js/2.ee6d67e9.chunk.js",
+    "static/css/main.067a2b8c.chunk.css",
+    "static/js/main.8f296c90.chunk.js"
   ]
 }
