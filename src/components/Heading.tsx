@@ -14,7 +14,21 @@ type HeadingProps = {
 
 const Heading = ({ title, size, color, className }: HeadingProps) => {
   return (
-    <div css={[style, sizes[size]]} className={className}>
+    <div
+      css={[
+        style,
+        sizes[size],
+        css`
+          h2 {
+            color: ${color};
+          }
+          hr {
+            background-color: ${color};
+          }
+        `,
+      ]}
+      className={className}
+    >
       <h2>{title}</h2>
       <hr />
     </div>
