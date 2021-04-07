@@ -2,7 +2,6 @@
   "name": "jandy-folio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hisfolio.herokuapp.com/",
   "dependencies": {
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
