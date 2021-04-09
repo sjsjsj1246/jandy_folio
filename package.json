@@ -2,7 +2,7 @@
   "name": "jandy-folio",
   "version": "0.1.0",
   "private": true,
-  "hompage": "https://hisfolio.com/",
+  "homepage": "https://hisfolio.com/",
   "dependencies": {
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
