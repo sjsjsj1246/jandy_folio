@@ -14,5 +14,5 @@
 
 ## Hosting
 
-- heroku : https://hisfolio.herokuapp.com/
 - git-page : https://sjsjsj1246.github.io/jandy_folio/
+- domain-name : https://hisfolio.com/
