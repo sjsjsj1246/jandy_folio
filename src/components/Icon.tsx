@@ -21,7 +21,7 @@ const Icon = ({
   disableDes,
 }: IconProps) => {
   return (
-    <Grid alignItems="center" item xs={2} css={[style]}>
+    <div css={[style, sizes[size]]}>
       <Avatar src={imgSrc} alt={title} css={sizes[size]} />
       {!disableDes && (
         <Description css={sizes[size]}>
@@ -29,7 +29,7 @@ const Icon = ({
           <p>{description}</p>
         </Description>
       )}
-    </Grid>
+    </div>
   );
 };
 Icon.defaultProps = {
@@ -40,11 +40,9 @@ Icon.defaultProps = {
 };
 
 const style = css`
-  width: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  margin: 0 5% 5% 0;
 `;
 
 const sizes = {
@@ -70,7 +68,9 @@ const sizes = {
 
 const Avatar = styled.img({
   borderRadius: "10%",
+  objectFit: "fill",
   boxShadow: "3px 3px 10px 0px rgba(0, 0, 0, 0.75)",
+  flexShrink: 0,
 });
 
 const Description = styled.div({
@@ -80,7 +80,6 @@ const Description = styled.div({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  alignContent: "center",
   textAlign: "center",
   transform: "translateY(-100px)",
   opacity: "0",
@@ -89,7 +88,6 @@ const Description = styled.div({
     margin: "1rem 0 ",
   },
   p: {
-    margin: "0 auto",
     marginBottom: "1rem",
   },
   ":hover": {

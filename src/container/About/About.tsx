@@ -11,35 +11,18 @@ const About = () => {
         <Heading title="About Me" className="aboutTitle" />
         <div className="description">
           <h3>성장하는 개발자</h3>
-          <p>안녕하세요^^</p>
+          <p>
+            안녕하세요, 서울 과학 기술대에 재학하고 있고 풀스택 개발자로 일하고
+            있는 황인서입니다. <br /> 사회가 필요로 하는 가치를 창출하기 위해
+            매일 더 나은 기술을 공부하고 고민하고 있습니다. <br />
+          </p>
         </div>
       </div>
       <Heading title="Skills" className="skillsTitle" />
-      <Grid
-        container
-        direction="column"
-        justify="center"
-        spacing={3}
-        className="skillGrid"
-      >
-        <Grid item xs={12} className="skillList">
-          <h2 className="skillTitle">publishing</h2>
-          <Grid container direction="row" justify="center" className="skill">
-            <Icon
-              title="JavaScript"
-              imgSrc="https://i.postimg.cc/3w2Pk3wy/image.png"
-              description="familiar"
-            />
-            <Icon
-              title="React"
-              imgSrc="https://i.postimg.cc/B6TbZg7D/1-mr-OXGy-Ia3-Bl-PK80pe-Lm-Eb-A.png"
-              description="familiar"
-            />
-          </Grid>
-        </Grid>
-        <Grid item xs={12} className="skillList">
-          <h2 className="skillTitle">Font End</h2>
-          <Grid container direction="row" justify="center" className="skill">
+      <div className="skillGrid">
+        <div className="skillList">
+          <h2 className="skillTitle">Language</h2>
+          <div className="skill">
             <Icon
               title="JavaScript"
               imgSrc="https://i.postimg.cc/3w2Pk3wy/image.png"
@@ -50,6 +33,26 @@ const About = () => {
               imgSrc="https://i.postimg.cc/nVPBpbGf/typescript.png"
               description="tried"
             />
+            <Icon
+              title="C++"
+              imgSrc="https://i.postimg.cc/Tw7yHfjp/Cplusplus.jpg"
+              description="familiar"
+            />
+            <Icon
+              title="Java"
+              imgSrc="https://i.postimg.cc/7bvZp65Y/java.webp"
+              description="tried"
+            />
+            <Icon
+              title="Python"
+              imgSrc="https://i.postimg.cc/25jhHcp9/python.png"
+              description="tried"
+            />
+          </div>
+        </div>
+        <div className="skillList">
+          <h2 className="skillTitle">Font End</h2>
+          <div className="skill">
             <Icon
               title="React"
               imgSrc="https://i.postimg.cc/B6TbZg7D/1-mr-OXGy-Ia3-Bl-PK80pe-Lm-Eb-A.png"
@@ -65,11 +68,16 @@ const About = () => {
               imgSrc="https://i.postimg.cc/0N21KCND/emotion.png"
               description="tried"
             />
-          </Grid>
-        </Grid>
-        <Grid item xs={12} className="skillList">
+            <Icon
+              title="Android"
+              imgSrc="https://i.postimg.cc/NGX9xq9f/android.webp"
+              description="tried"
+            />
+          </div>
+        </div>
+        <div className="skillList">
           <h2 className="skillTitle">Back End</h2>
-          <Grid container direction="row" justify="center" className="skill">
+          <div className="skill">
             <Icon
               title="Node"
               imgSrc="https://i.postimg.cc/QtJGyjGL/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6261746e30353030302f696d6167652f75706c6f61642f.png"
@@ -80,26 +88,20 @@ const About = () => {
               imgSrc="https://i.postimg.cc/xT08Kr6h/Express.png"
               description="tried"
             />
-          </Grid>
-        </Grid>
-        <Grid item xs={12} className="skillList">
+            <Icon
+              title="Koa"
+              imgSrc="https://i.postimg.cc/CxxxXW18/koa.png"
+              description="tried"
+            />
+          </div>
+        </div>
+        <div className="skillList">
           <h2 className="skillTitle">ETC</h2>
-          <Grid container direction="row" justify="center" className="skill">
+          <div className="skill">
             <Icon
               title="git"
               imgSrc="https://i.postimg.cc/tgM6L2Zz/git-thumnail.png"
               description="familiar"
-            />
-
-            <Icon
-              title="Algorithm with C++"
-              imgSrc="https://i.postimg.cc/MGZ7h8Lk/neural.png"
-              description="familiar"
-            />
-            <Icon
-              title="StoryBook"
-              imgSrc="https://i.postimg.cc/brb10kv9/storybook.png"
-              description="tried"
             />
             <Icon
               title="Unity"
@@ -107,13 +109,23 @@ const About = () => {
               description="tried"
             />
             <Icon
-              title="DataScience with Python"
+              title="StoryBook"
+              imgSrc="https://i.postimg.cc/brb10kv9/storybook.png"
+              description="tried"
+            />
+            <Icon
+              title="Algorithm"
+              imgSrc="https://i.postimg.cc/MGZ7h8Lk/neural.png"
+              description="familiar"
+            />
+            <Icon
+              title="DataScience"
               imgSrc="https://i.postimg.cc/8CWwLr51/deep-learning-1.png"
               description="tried"
             />
-          </Grid>
-        </Grid>
-      </Grid>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -121,10 +133,10 @@ const About = () => {
 const style = css`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   background-color: #f5f5f5;
+  padding-bottom: 2rem;
   width: 100%;
-  padding-bottom: 5rem;
   .aboutMe {
     width: 100%;
     display: flex;
@@ -132,29 +144,30 @@ const style = css`
     align-items: center;
     background-color: white;
     .aboutTitle {
-      margin: 10rem;
+      margin: 10rem 10rem 10rem 15%;
+    }
+    .description {
+      width: 40%;
     }
   }
   .skillsTitle {
-    margin-top: 5rem;
+    margin: 5rem auto 0 15%;
   }
   .skillTitle {
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
   }
   .skillGrid {
-    width: 80%;
+    width: 85%;
+    margin-left: 15%;
   }
   .skillList {
+    display: flex;
+    flex-direction: column;
   }
-  /* .skillList:nth-child(odd) {
-    background-color: #c6ccc8;
-  }
-  .skillList:nth-child(even) {
-    background-color: #f5f5f5;
-  } */
   .skill {
-    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
   }
 `;
 
