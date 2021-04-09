@@ -42,7 +42,7 @@ Icon.defaultProps = {
 const style = css`
   display: flex;
   flex-direction: column;
-  margin: 0 5% 5% 0;
+  margin: 0 5% 3% 0;
 `;
 
 const sizes = {

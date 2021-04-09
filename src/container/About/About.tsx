@@ -167,6 +167,7 @@ const style = css`
   }
   .skill {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
   }
 `;
