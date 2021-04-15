@@ -35,11 +35,6 @@ const Nav = ({
       currentScrollPosition +
       (contactRef?.current?.getBoundingClientRect().top || 0);
 
-    console.log("scroll : " + currentScrollPosition);
-    console.log("home : " + homePosition);
-    console.log("about : " + aboutPosition);
-    console.log("portfolio : " + portfolioPosition);
-    console.log("contact : " + contactPosition);
     if (currentScrollPosition >= homePosition) setPosition(0);
     if (currentScrollPosition >= aboutPosition - 50) setPosition(1);
     if (currentScrollPosition >= portfolioPosition - 50) setPosition(2);

@@ -26,6 +26,7 @@ const style = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
   img {
     min-width: 100%;
     width: auto;
