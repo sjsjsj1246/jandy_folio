@@ -1,10 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from "@emotion/react";
+import Heading from "../../components/Heading";
 
 const Portfolio = () => {
   return (
     <div css={style}>
-      <h1>PortFolio</h1>
+      <Heading title="PortFolio" className="portfolioTitle" />
+      <div className="portGrid"></div>
     </div>
   );
 };
@@ -12,12 +14,12 @@ const Portfolio = () => {
 const style = css`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: white;
   width: 100%;
   height: 100vh;
-  h1 {
-    margin: 0;
+  .portfolioTitle {
+    margin: 5rem 0;
   }
 `;
 

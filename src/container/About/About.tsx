@@ -3,8 +3,118 @@ import { jsx, css } from "@emotion/react";
 import Heading from "../../components/Heading";
 import Icon from "../../components/Icon";
 import { Grid } from "@material-ui/core";
+import { useState } from "react";
 
 const About = () => {
+  const [skills, useSkills] = useState([
+    {
+      title: "Language",
+      stack: [
+        {
+          title: "JavaScript",
+          des: "familiar",
+          imgURL: "https://i.postimg.cc/3w2Pk3wy/image.png",
+        },
+        {
+          title: "TypeScript",
+          des: "tried",
+          imgURL: "https://i.postimg.cc/nVPBpbGf/typescript.png",
+        },
+        {
+          title: "C++",
+          des: "familiar",
+          imgURL: "https://i.postimg.cc/Tw7yHfjp/Cplusplus.jpg",
+        },
+        {
+          title: "Java",
+          des: "tried",
+          imgURL: "https://i.postimg.cc/7bvZp65Y/java.webp",
+        },
+        {
+          title: "Python",
+          des: "tried",
+          imgURL: "https://i.postimg.cc/25jhHcp9/python.png",
+        },
+      ],
+    },
+    {
+      title: "Font End",
+      stack: [
+        {
+          title: "React",
+          des: "familiar",
+          imgURL:
+            "https://i.postimg.cc/B6TbZg7D/1-mr-OXGy-Ia3-Bl-PK80pe-Lm-Eb-A.png",
+        },
+        {
+          title: "React-Naitive",
+          des: "tried",
+          imgURL: "https://i.postimg.cc/NLq5QnB1/React-js-logo-512.png",
+        },
+        {
+          title: "Emotion",
+          des: "familiar",
+          imgURL: "https://i.postimg.cc/0N21KCND/emotion.png",
+        },
+        {
+          title: "Gatsby",
+          des: "tried",
+          imgURL: "https://i.postimg.cc/1Rpmvnv6/image.png",
+        },
+      ],
+    },
+    {
+      title: "Back End",
+      stack: [
+        {
+          title: "Node",
+          des: "tried",
+          imgURL:
+            "https://i.postimg.cc/QtJGyjGL/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6261746e30353030302f696d6167652f75706c6f61642f.png",
+        },
+        {
+          title: "Express",
+          des: "tried",
+          imgURL: "https://i.postimg.cc/xT08Kr6h/Express.png",
+        },
+        {
+          title: "Koa",
+          des: "tried",
+          imgURL: "https://i.postimg.cc/CxxxXW18/koa.png",
+        },
+      ],
+    },
+    {
+      title: "ETC",
+      stack: [
+        {
+          title: "git",
+          des: "familiar",
+          imgURL: "https://i.postimg.cc/tgM6L2Zz/git-thumnail.png",
+        },
+        {
+          title: "Unity",
+          des: "tried",
+          imgURL: "https://i.postimg.cc/MTV0jk9X/2.png",
+        },
+        {
+          title: "StoryBook",
+          des: "tried",
+          imgURL: "https://i.postimg.cc/brb10kv9/storybook.png",
+        },
+        {
+          title: "Algorithm",
+          des: "familiar",
+          imgURL: "https://i.postimg.cc/MGZ7h8Lk/neural.png",
+        },
+        {
+          title: "DataScience",
+          des: "tried",
+          imgURL: "https://i.postimg.cc/8CWwLr51/deep-learning-1.png",
+        },
+      ],
+    },
+  ]);
   return (
     <div id="About" css={style}>
       <div className="aboutMe">
@@ -21,111 +131,20 @@ const About = () => {
       <div className="skills">
         <Heading title="Skills" className="skillsTitle" />
         <div className="skillGrid">
-          <div className="skillList">
-            <h2 className="skillTitle">Language</h2>
-            <div className="skill">
-              <Icon
-                title="JavaScript"
-                imgSrc="https://i.postimg.cc/3w2Pk3wy/image.png"
-                description="familiar"
-              />
-              <Icon
-                title="TypeScript"
-                imgSrc="https://i.postimg.cc/nVPBpbGf/typescript.png"
-                description="tried"
-              />
-              <Icon
-                title="C++"
-                imgSrc="https://i.postimg.cc/Tw7yHfjp/Cplusplus.jpg"
-                description="familiar"
-              />
-              <Icon
-                title="Java"
-                imgSrc="https://i.postimg.cc/7bvZp65Y/java.webp"
-                description="tried"
-              />
-              <Icon
-                title="Python"
-                imgSrc="https://i.postimg.cc/25jhHcp9/python.png"
-                description="tried"
-              />
+          {skills.map((skillList) => (
+            <div className="skillList">
+              <h2 className="skillTitle">{skillList.title}</h2>
+              <div className="skill">
+                {skillList.stack.map((skill) => (
+                  <Icon
+                    title={skill.title}
+                    imgSrc={skill.imgURL}
+                    description={skill.des}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="skillList">
-            <h2 className="skillTitle">Font End</h2>
-            <div className="skill">
-              <Icon
-                title="React"
-                imgSrc="https://i.postimg.cc/B6TbZg7D/1-mr-OXGy-Ia3-Bl-PK80pe-Lm-Eb-A.png"
-                description="familiar"
-              />
-              <Icon
-                title="React-Naitive"
-                imgSrc="https://i.postimg.cc/NLq5QnB1/React-js-logo-512.png"
-                description="tried"
-              />
-              <Icon
-                title="emotion"
-                imgSrc="https://i.postimg.cc/0N21KCND/emotion.png"
-                description="tried"
-              />
-              <Icon
-                title="Android"
-                imgSrc="https://i.postimg.cc/NGX9xq9f/android.webp"
-                description="tried"
-              />
-            </div>
-          </div>
-          <div className="skillList">
-            <h2 className="skillTitle">Back End</h2>
-            <div className="skill">
-              <Icon
-                title="Node"
-                imgSrc="https://i.postimg.cc/QtJGyjGL/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6261746e30353030302f696d6167652f75706c6f61642f.png"
-                description="tried"
-              />
-              <Icon
-                title="Express"
-                imgSrc="https://i.postimg.cc/xT08Kr6h/Express.png"
-                description="tried"
-              />
-              <Icon
-                title="Koa"
-                imgSrc="https://i.postimg.cc/CxxxXW18/koa.png"
-                description="tried"
-              />
-            </div>
-          </div>
-          <div className="skillList">
-            <h2 className="skillTitle">ETC</h2>
-            <div className="skill">
-              <Icon
-                title="git"
-                imgSrc="https://i.postimg.cc/tgM6L2Zz/git-thumnail.png"
-                description="familiar"
-              />
-              <Icon
-                title="Unity"
-                imgSrc="https://i.postimg.cc/MTV0jk9X/2.png"
-                description="tried"
-              />
-              <Icon
-                title="StoryBook"
-                imgSrc="https://i.postimg.cc/brb10kv9/storybook.png"
-                description="tried"
-              />
-              <Icon
-                title="Algorithm"
-                imgSrc="https://i.postimg.cc/MGZ7h8Lk/neural.png"
-                description="familiar"
-              />
-              <Icon
-                title="DataScience"
-                imgSrc="https://i.postimg.cc/8CWwLr51/deep-learning-1.png"
-                description="tried"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
@@ -146,7 +165,7 @@ const style = css`
     align-items: center;
     background-color: white;
     .aboutTitle {
-      margin: 10rem 10rem 10rem 0;
+      margin: 10rem 5rem 10rem 0;
     }
     .description {
     }
