@@ -1,8 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from "@emotion/react";
-import Heading from "../../components/Heading";
-import Icon from "../../components/Icon";
-import { Grid } from "@material-ui/core";
+import Heading from "../components/Heading";
+import Icon from "../components/Icon";
 import { useState } from "react";
 
 const About = () => {
@@ -138,7 +137,7 @@ const About = () => {
                 {skillList.stack.map((skill) => (
                   <Icon
                     title={skill.title}
-                    imgSrc={skill.imgURL}
+                    imgUrl={skill.imgURL}
                     description={skill.des}
                   />
                 ))}
@@ -155,19 +154,17 @@ const style = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f5f5f5;
-  padding-bottom: 2rem;
+  background-color: white;
+  padding-bottom: 3rem;
   width: 100%;
   .aboutMe {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #f5f5f5;
     .aboutTitle {
-      margin: 10rem 5rem 10rem 0;
-    }
-    .description {
+      margin: 8rem 5rem 8rem 0;
     }
   }
   .skills {

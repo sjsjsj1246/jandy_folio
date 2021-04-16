@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from "@emotion/react";
-import Heading from "../../components/Heading";
+import Heading from "../components/Heading";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FormEventHandler, useEffect, useRef } from "react";
 import emailjs, { init } from "emailjs-com";

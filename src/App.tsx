@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import "./App.css";
-import Nav from "./container/Nav/Nav";
-import Home from "./container/Home/Home";
-import About from "./container/About/About";
-import Portfolio from "./container/Portfolio/Portfolio";
-import Contact from "./container/Contact/Contact";
+import Nav from "./container/Nav";
+import Home from "./container/Home";
+import About from "./container/About";
+import Portfolio from "./container/Portfolio";
+import Contact from "./container/Contact";
 
 function App() {
   const homeRef = useRef<HTMLDivElement>(null);

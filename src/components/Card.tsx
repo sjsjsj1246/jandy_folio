@@ -2,7 +2,7 @@
 import { jsx, css } from "@emotion/react";
 import styled from "@emotion/styled";
 
-type IconProps = {
+type CardProps = {
   title?: string;
   size: "small" | "medium" | "big";
   backgroundColor?: string;
@@ -11,17 +11,17 @@ type IconProps = {
   disableDes?: boolean;
 };
 
-const Icon = ({
+const Card = ({
   title,
   size,
   backgroundColor,
   imgUrl,
   description,
   disableDes,
-}: IconProps) => {
+}: CardProps) => {
   return (
     <div css={[style, sizes[size]]}>
-      <Avatar src={imgUrl} alt={title} css={sizes[size]} />
+      <CardImg src={imgUrl} alt={title} css={sizes[size]} />
       {!disableDes && (
         <Description css={sizes[size]}>
           <h3>{title}</h3>
@@ -31,7 +31,7 @@ const Icon = ({
     </div>
   );
 };
-Icon.defaultProps = {
+Card.defaultProps = {
   title: "",
   size: "medium",
   backgroundColor: "#B5B5B5",
@@ -41,10 +41,6 @@ Icon.defaultProps = {
 const style = css`
   display: flex;
   flex-direction: column;
-  margin: 0 50px 30px 0;
-  :last-child {
-    margin: 0;
-  }
 `;
 
 const sizes = {
@@ -53,10 +49,10 @@ const sizes = {
     height: 70px;
   `,
   medium: css`
-    width: 100px;
-    height: 100px;
+    width: 280px;
+    height: 200px;
     h3 {
-      font-size: 1rem;
+      font-size: 2rem;
     }
     p {
       font-size: 1rem;
@@ -68,33 +64,52 @@ const sizes = {
   `,
 };
 
-const Avatar = styled.img({
-  borderRadius: "10%",
-  objectFit: "fill",
-  boxShadow: "3px 3px 10px 0px rgba(0, 0, 0, 0.75)",
+const CardImg = styled.img({
+  objectFit: "cover",
   flexShrink: 0,
 });
 
 const Description = styled.div({
-  borderRadius: "10%",
-  color: "white",
-  backgroundColor: "black",
+  color: "black",
+  backgroundColor: "white",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   textAlign: "center",
-  transform: "translateY(-100px)",
   opacity: "0",
+  transform: "translateY(-200px)",
   transition: "all 0.3s ease",
   h3: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100px",
     margin: "1rem 0 ",
+    transition: "all 0.3s ease",
+    transform: "translateY(-50px)",
+    opacity: "0",
   },
   p: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100px",
     marginBottom: "1rem",
+    transition: "all 0.3s ease",
+    transform: "translateY(50px)",
+    opacity: "0",
   },
   ":hover": {
     opacity: "0.85",
+    p: {
+      transform: "translateY(0px)",
+      opacity: "1",
+    },
+    h3: {
+      transform: "translateY(0px)",
+      opacity: "1",
+    },
   },
 });
 
-export default Icon;
+export default Card;

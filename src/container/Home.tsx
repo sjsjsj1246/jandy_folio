@@ -38,6 +38,7 @@ const style = css`
     z-index: -1;
   }
   h1 {
+    width: 94%;
     margin: 0;
     font-size: 6rem;
     letter-spacing: 0.5rem;
@@ -46,6 +47,8 @@ const style = css`
     position: absolute;
     left: 4%;
     top: 55%;
+    white-space: nowrap;
+    overflow: hidden;
   }
 `;
 
