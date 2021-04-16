@@ -35,6 +35,9 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+    nameRef.current!.value = "";
+    messageRef.current!.value = "";
+    emailRef.current!.value = "";
   };
   return (
     <div css={style}>
