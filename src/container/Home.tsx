@@ -38,7 +38,7 @@ const style = css`
     z-index: -1;
   }
   h1 {
-    width: 94%;
+    width: 96%;
     margin: 0;
     font-size: 6rem;
     letter-spacing: 0.5rem;
@@ -49,6 +49,18 @@ const style = css`
     top: 55%;
     white-space: nowrap;
     overflow: hidden;
+  }
+  @media screen and (max-width: 110rem) {
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 0.3rem;
+    }
+  }
+  @media screen and (max-width: 72rem) {
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 0.2rem;
+    }
   }
 `;
 

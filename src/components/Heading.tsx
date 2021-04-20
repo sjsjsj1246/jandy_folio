@@ -36,7 +36,7 @@ const Heading = ({ title, size, color, className }: HeadingProps) => {
 };
 Heading.defaultProps = {
   size: "medium",
-  color: "black",
+  color: "#403a3a",
 };
 
 const style = css`
@@ -50,7 +50,6 @@ const style = css`
     width: 70%;
     height: 3px;
     border: 0px;
-    background-color: black;
   }
 `;
 

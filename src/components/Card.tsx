@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { MouseEventHandler } from "react";
 
 type CardProps = {
   title?: string;
@@ -9,6 +10,7 @@ type CardProps = {
   imgUrl?: string;
   description?: string;
   disableDes?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
 const Card = ({
@@ -18,6 +20,7 @@ const Card = ({
   imgUrl,
   description,
   disableDes,
+  onClick,
 }: CardProps) => {
   return (
     <div css={[style, sizes[size]]}>
@@ -25,7 +28,7 @@ const Card = ({
       {!disableDes && (
         <Description css={sizes[size]}>
           <h3>{title}</h3>
-          <p>{description}</p>
+          <button onClick={onClick}>{description}</button>
         </Description>
       )}
     </div>
@@ -49,12 +52,12 @@ const sizes = {
     height: 70px;
   `,
   medium: css`
-    width: 280px;
-    height: 200px;
+    width: 20rem;
+    height: 14rem;
     h3 {
       font-size: 2rem;
     }
-    p {
+    button {
       font-size: 1rem;
     }
   `,
@@ -70,38 +73,47 @@ const CardImg = styled.img({
 });
 
 const Description = styled.div({
-  color: "black",
+  color: "#403a3a",
   backgroundColor: "white",
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
+  justifyContent: "space-around",
+  alignItems: "center",
   textAlign: "center",
   opacity: "0",
-  transform: "translateY(-200px)",
+  transform: "translateY(-14rem)",
   transition: "all 0.3s ease",
   h3: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "100px",
+    height: "8rem",
     margin: "1rem 0 ",
     transition: "all 0.3s ease",
     transform: "translateY(-50px)",
     opacity: "0",
   },
-  p: {
+  button: {
+    width: "8rem",
+    height: "3rem",
+    margin: "0.5rem 0",
+    border: "3px solid #403a3a",
+    backgroundColor: "white",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "100px",
     marginBottom: "1rem",
     transition: "all 0.3s ease",
-    transform: "translateY(50px)",
+    transform: "translateY(20px)",
     opacity: "0",
+    ":hover": {
+      color: "white",
+      backgroundColor: "#403a3a",
+    },
   },
   ":hover": {
     opacity: "0.85",
-    p: {
+    button: {
       transform: "translateY(0px)",
       opacity: "1",
     },

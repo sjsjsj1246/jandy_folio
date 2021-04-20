@@ -157,6 +157,7 @@ const style = css`
   background-color: white;
   padding-bottom: 3rem;
   width: 100%;
+  color: #403a3a;
   .aboutMe {
     width: 100%;
     display: flex;
