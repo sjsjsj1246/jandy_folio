@@ -6,9 +6,9 @@ import { useTransition, animated } from "react-spring";
 export type DialogProps = {
   visible: boolean;
   title?: string;
+  subTitle?: string;
   description?: string;
   children?: React.ReactNode;
-  hideButtons?: boolean;
   cancellable?: boolean;
   cancelText: string;
   confirmText: string;
@@ -19,8 +19,8 @@ export type DialogProps = {
 const Dialog = ({
   visible,
   title,
+  subTitle,
   description,
-  hideButtons,
   cancellable,
   cancelText,
   confirmText,
@@ -72,10 +72,12 @@ const Dialog = ({
         item ? (
           <animated.div css={[fullscreen, whiteBoxWrapper]} style={style}>
             <div css={whiteBox} onClick={handleClick}>
-              {title && <h3>{title}</h3>}
-              {description && <p>{description}</p>}
               {children}
-              {!hideButtons && <h1>hi</h1>}
+              <div className="contents">
+                {title && <h2>{title}</h2>}
+                {subTitle && <h3>{subTitle}</h3>}
+                {description && <p>{description}</p>}
+              </div>
             </div>
           </animated.div>
         ) : null
@@ -112,20 +114,26 @@ const whiteBoxWrapper = css`
 const whiteBox = css`
   box-sizing: border-box;
   border-radius: 4px;
-  width: 25rem;
+  width: 35rem;
   background: white;
   box-shadow: 0px 4px 8px 8px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-
-  h3 {
+  .contents {
+    padding: 2rem;
+  }
+  h2 {
     font-size: 1.5rem;
     color: #343a40;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    margin: 0;
   }
-
+  h3 {
+    font-size: 1.225rem;
+    color: gray;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dbdbdb;
+  }
   p {
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin: 0;
     color: #868e96;
   }

@@ -160,7 +160,6 @@ const style = css`
   color: #403a3a;
   .description {
     h3 {
-      color: #81b58f;
       font-size: 1.5rem;
     }
     p {

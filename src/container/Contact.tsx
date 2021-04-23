@@ -84,6 +84,7 @@ const style = css`
   background-color: #4d4646;
   width: 100%;
   height: 100vh;
+  padding: 5rem 0;
   p {
     font-size: 1.5rem;
     margin-bottom: 2rem;

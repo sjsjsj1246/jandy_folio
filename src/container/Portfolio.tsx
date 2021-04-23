@@ -4,6 +4,8 @@ import { MouseEventHandler, useState } from "react";
 import Card from "../components/Card";
 import Dialog from "../components/Dialog";
 import Heading from "../components/Heading";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 
 const Portfolio = () => {
   const [toggle, setToggle] = useState(false);
@@ -15,11 +17,39 @@ const Portfolio = () => {
   document.body.onclick = () => {
     setToggle(false);
   };
+  const slideImages = [
+    "http://www.mkhealth.co.kr/news/photo/202010/50970_51164_4758.jpg",
+    "http://www.mkhealth.co.kr/news/photo/202010/50970_51164_4758.jpg",
+    "http://www.mkhealth.co.kr/news/photo/202010/50970_51164_4758.jpg",
+  ];
   return (
     <div css={style}>
       <Heading title="PortFolio" className="portfolioTitle" />
       <div className="portGrid">
-        <Dialog visible={toggle} />
+        <Dialog
+          visible={toggle}
+          title="hi"
+          subTitle="subtitle"
+          description="des"
+        >
+          <Slide easing="ease" transitionDuration="500">
+            <div className="each-slide">
+              <div style={{ backgroundImage: `url(${slideImages[0]})` }}>
+                <span>Slide 1</span>
+              </div>
+            </div>
+            <div className="each-slide">
+              <div style={{ backgroundImage: `url(${slideImages[1]})` }}>
+                <span>Slide 2</span>
+              </div>
+            </div>
+            <div className="each-slide">
+              <div style={{ backgroundImage: `url(${slideImages[2]})` }}>
+                <span>Slide 3</span>
+              </div>
+            </div>
+          </Slide>
+        </Dialog>
         <Card
           title="Test"
           tag="react / node"
@@ -58,8 +88,23 @@ const style = css`
   background-color: #f5f5f5;
   width: 100%;
   height: 100vh;
+  padding: 5rem 0;
+  .each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+  }
+
+  .each-slide span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  }
   .portfolioTitle {
-    margin: 5rem 0;
+    margin-bottom: 5rem 0;
   }
   .portGrid {
     display: flex;
