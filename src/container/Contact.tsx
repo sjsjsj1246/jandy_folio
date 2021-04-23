@@ -87,7 +87,7 @@ const style = css`
   p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    color: #f5f5f5;
+    color: #81b58f;
   }
   form {
     display: flex;
@@ -119,11 +119,11 @@ const style = css`
     color: #f5f5f5;
     border: 3px solid #f5f5f5;
     cursor: pointer;
-    transition: all ease 0.5s;
+    transition: all ease 0.3s;
   }
   .submit:hover {
-    border: 3px solid #998b8b;
-    background-color: #998b8b;
+    border: 3px solid #81b58f;
+    background-color: #81b58f;
   }
   .contactList {
     margin-top: 5rem;
@@ -144,7 +144,7 @@ const style = css`
   }
   .icon:hover {
     transform: scale(0.92);
-    background-color: #998b8b;
+    background-color: #81b58f;
   }
 `;
 

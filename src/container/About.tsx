@@ -158,6 +158,15 @@ const style = css`
   padding-bottom: 3rem;
   width: 100%;
   color: #403a3a;
+  .description {
+    h3 {
+      color: #81b58f;
+      font-size: 1.5rem;
+    }
+    p {
+      margin-bottom: 3rem;
+    }
+  }
   .aboutMe {
     width: 100%;
     display: flex;

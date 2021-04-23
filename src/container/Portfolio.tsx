@@ -22,6 +22,7 @@ const Portfolio = () => {
         <Dialog visible={toggle} />
         <Card
           title="Test"
+          tag="react / node"
           description="LEARN MORE"
           imgUrl="https://cdn.pixabay.com/photo/2014/07/01/12/35/taxi-381233__340.jpg"
           onClick={handleToggle}

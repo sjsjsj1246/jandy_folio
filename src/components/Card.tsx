@@ -5,6 +5,7 @@ import { MouseEventHandler } from "react";
 
 type CardProps = {
   title?: string;
+  tag?: string;
   size: "small" | "medium" | "big";
   backgroundColor?: string;
   imgUrl?: string;
@@ -21,13 +22,17 @@ const Card = ({
   description,
   disableDes,
   onClick,
+  tag,
 }: CardProps) => {
   return (
     <div css={[style, sizes[size]]}>
       <CardImg src={imgUrl} alt={title} css={sizes[size]} />
       {!disableDes && (
         <Description css={sizes[size]}>
-          <h3>{title}</h3>
+          <div className="title">
+            <h3>{title}</h3>
+            <p>{tag}</p>
+          </div>
           <button onClick={onClick}>{description}</button>
         </Description>
       )}
@@ -54,8 +59,8 @@ const sizes = {
   medium: css`
     width: 20rem;
     height: 14rem;
-    h3 {
-      font-size: 2rem;
+    .title {
+      font-size: 1.5rem;
     }
     button {
       font-size: 1rem;
@@ -73,7 +78,6 @@ const CardImg = styled.img({
 });
 
 const Description = styled.div({
-  color: "#403a3a",
   backgroundColor: "white",
   display: "flex",
   flexDirection: "column",
@@ -83,32 +87,40 @@ const Description = styled.div({
   opacity: "0",
   transform: "translateY(-14rem)",
   transition: "all 0.3s ease",
-  h3: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "8rem",
-    margin: "1rem 0 ",
+  ".title": {
+    height: "7rem",
+    margin: "2rem 0 0 0 ",
     transition: "all 0.3s ease",
     transform: "translateY(-50px)",
     opacity: "0",
+    h3: {
+      color: "#403a3a",
+      margin: "0.1rem 0",
+      fontsize: "1em",
+    },
+    p: {
+      margin: "0",
+      fontsize: "0.8em",
+      color: "#81B58F",
+    },
   },
   button: {
     width: "8rem",
     height: "3rem",
-    margin: "0.5rem 0",
-    border: "3px solid #403a3a",
+    margin: "0 0 2rem 0",
+    border: "3px solid #81B58F",
     backgroundColor: "white",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: "1rem",
     transition: "all 0.3s ease",
+    color: "#403a3a",
     transform: "translateY(20px)",
     opacity: "0",
     ":hover": {
       color: "white",
-      backgroundColor: "#403a3a",
+      fontWeight: "bold",
+      backgroundColor: "#81B58F",
     },
   },
   ":hover": {
@@ -117,7 +129,7 @@ const Description = styled.div({
       transform: "translateY(0px)",
       opacity: "1",
     },
-    h3: {
+    ".title": {
       transform: "translateY(0px)",
       opacity: "1",
     },

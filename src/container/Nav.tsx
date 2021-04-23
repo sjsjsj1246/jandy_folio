@@ -91,6 +91,9 @@ const navStyle = css`
   background-color: #403a3a;
   color: white;
   height: 5vh;
+  .Mui-selected {
+    color: #9ad9ac;
+  }
 `;
 
 const navTopStyle = css`

@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from "@emotion/react";
-import { Fragment } from "react";
+import { Fragment, MouseEventHandler } from "react";
 import { useTransition, animated } from "react-spring";
 
 export type DialogProps = {
@@ -36,15 +36,15 @@ const Dialog = ({
 
   const slideUpTransition = useTransition(visible, {
     from: {
-      transform: `translateY(200px) scale(0.8)`,
+      transform: `scale(0.5)`,
       opacity: 0,
     },
     enter: {
-      transform: `translateY(0px) scale(1)`,
+      transform: `scale(1)`,
       opacity: 1,
     },
     leave: {
-      transform: `translateY(200px) scale(0.8)`,
+      transform: `scale(0.5)`,
       opacity: 0,
     },
     config: {
@@ -52,6 +52,10 @@ const Dialog = ({
       friction: 15,
     },
   });
+
+  const handleClick: MouseEventHandler<HTMLDivElement> = (e) => {
+    e.stopPropagation();
+  };
 
   return (
     <Fragment>
@@ -67,7 +71,7 @@ const Dialog = ({
       {slideUpTransition((style, item) =>
         item ? (
           <animated.div css={[fullscreen, whiteBoxWrapper]} style={style}>
-            <div css={whiteBox}>
+            <div css={whiteBox} onClick={handleClick}>
               {title && <h3>{title}</h3>}
               {description && <p>{description}</p>}
               {children}
@@ -95,7 +99,7 @@ const fullscreen = css`
 
 const darkLayer = css`
   z-index: 10;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
 `;
 
 const whiteBoxWrapper = css`
