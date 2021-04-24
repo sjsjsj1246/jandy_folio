@@ -32,11 +32,14 @@ const Dialog = ({
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
+    config: {
+      duration: 10,
+    },
   });
 
-  const slideUpTransition = useTransition(visible, {
+  const popUpTransition = useTransition(visible, {
     from: {
-      transform: `scale(0.5)`,
+      transform: `scale(0.8)`,
       opacity: 0,
     },
     enter: {
@@ -44,12 +47,12 @@ const Dialog = ({
       opacity: 1,
     },
     leave: {
-      transform: `scale(0.5)`,
+      transform: `scale(0)`,
       opacity: 0,
     },
     config: {
-      tension: 200,
-      friction: 15,
+      tension: 250,
+      friction: 13,
     },
   });
 
@@ -68,7 +71,7 @@ const Dialog = ({
         ) : null
       )}
 
-      {slideUpTransition((style, item) =>
+      {popUpTransition((style, item) =>
         item ? (
           <animated.div css={[fullscreen, whiteBoxWrapper]} style={style}>
             <div css={whiteBox} onClick={handleClick}>
