@@ -41,7 +41,7 @@ Icon.defaultProps = {
 const style = css`
   display: flex;
   flex-direction: column;
-  margin: 0 50px 30px 0;
+  margin: 0 3rem 1.8rem 0;
   :last-child {
     margin: 0;
   }

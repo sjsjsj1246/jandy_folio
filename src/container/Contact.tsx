@@ -124,9 +124,9 @@ const style = css`
     border: 3px solid #f5f5f5;
     cursor: pointer;
     transition: all ease 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @media (max-width: 568px) {
+      line-height: 0.25rem;
+    }
   }
   .submit:hover {
     border: 3px solid #81b58f;

@@ -109,8 +109,11 @@ const style = css`
   .portGrid {
     display: flex;
     flex-wrap: wrap;
-    width: 60rem;
+    width: 66rem;
     height: fit-content;
+    @media (max-width: 568px) {
+      width: 44rem;
+    }
   }
   .des {
   }

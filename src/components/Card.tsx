@@ -49,6 +49,7 @@ Card.defaultProps = {
 const style = css`
   display: flex;
   flex-direction: column;
+  margin: 1rem;
 `;
 
 const sizes = {
