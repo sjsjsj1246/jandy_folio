@@ -53,8 +53,8 @@ const sizes = {
     height: 70px;
   `,
   medium: css`
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     h3 {
       font-size: 1rem;
     }
@@ -83,7 +83,7 @@ const Description = styled.div({
   flexDirection: "column",
   justifyContent: "center",
   textAlign: "center",
-  transform: "translateY(-100px)",
+  transform: "translateY(-6.25rem)",
   opacity: "0",
   transition: "all 0.3s ease",
   h3: {

@@ -27,6 +27,9 @@ const style = css`
   justify-content: center;
   align-items: center;
   user-select: none;
+  @media (max-width: 568px) {
+    height: 50vh;
+  }
   img {
     min-width: 100%;
     width: auto;
@@ -47,6 +50,10 @@ const style = css`
     position: absolute;
     left: 4%;
     top: 55%;
+    @media (max-width: 568px) {
+      top: 25%;
+      height: 50vh;
+    }
     white-space: nowrap;
     overflow: hidden;
   }

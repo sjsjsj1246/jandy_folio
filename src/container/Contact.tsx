@@ -83,8 +83,11 @@ const style = css`
   align-items: center;
   background-color: #4d4646;
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   padding: 5rem 0;
+  @media (max-width: 568px) {
+    padding: 10rem 0;
+  }
   p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
@@ -121,6 +124,9 @@ const style = css`
     border: 3px solid #f5f5f5;
     cursor: pointer;
     transition: all ease 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .submit:hover {
     border: 3px solid #81b58f;
