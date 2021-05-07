@@ -34,18 +34,23 @@ const Portfolio = () => {
           visible={toggle}
           title="우리은행 해커톤"
           subTitle="React / Redux"
-          description="우리은행 해커톤에서 프론트엔드 분야를 맡았고 장려상을 수상했습니다."
+          description="2021년 우리은행 온택트 해커톤에서 프론트엔드 분야를 맡았고 장려상을 수상했습니다."
           url="https://github.com/woori-hippy/hippy_front"
         >
           <Slide easing="ease" transitionDuration="500">
             {slideImages.map((url) => (
               <div className="each-slide">
-                <div
-                  style={{
-                    backgroundImage: `url(${url})`,
-                    backgroundSize: "contain",
-                  }}
-                ></div>
+                <div style={{ height: "fit-content" }}>
+                  <img
+                    src={`${url}`}
+                    alt="img"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      objectFit: "contain",
+                    }}
+                  />
+                </div>
               </div>
             ))}
           </Slide>

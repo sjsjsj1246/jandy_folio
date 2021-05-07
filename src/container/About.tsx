@@ -56,6 +56,11 @@ const About = () => {
           imgURL: "https://i.postimg.cc/0N21KCND/emotion.png",
         },
         {
+          title: "Material-UI",
+          des: "familiar",
+          imgURL: "https://i.postimg.cc/8P7wn7wT/image.png",
+        },
+        {
           title: "Gatsby",
           des: "tried",
           imgURL: "https://i.postimg.cc/1Rpmvnv6/image.png",
@@ -76,11 +81,11 @@ const About = () => {
           des: "tried",
           imgURL: "https://i.postimg.cc/xT08Kr6h/Express.png",
         },
-        {
-          title: "Koa",
-          des: "tried",
-          imgURL: "https://i.postimg.cc/CxxxXW18/koa.png",
-        },
+        // {
+        //   title: "Koa",
+        //   des: "tried",
+        //   imgURL: "https://i.postimg.cc/CxxxXW18/koa.png",
+        // },
       ],
     },
     {
