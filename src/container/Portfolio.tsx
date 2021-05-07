@@ -18,9 +18,13 @@ const Portfolio = () => {
     setToggle(false);
   };
   const slideImages = [
-    "http://www.mkhealth.co.kr/news/photo/202010/50970_51164_4758.jpg",
-    "http://www.mkhealth.co.kr/news/photo/202010/50970_51164_4758.jpg",
-    "http://www.mkhealth.co.kr/news/photo/202010/50970_51164_4758.jpg",
+    "https://i.postimg.cc/R0JmWf8b/Kakao-Talk-Photo-2021-05-08-02-46-54-2.png",
+    "https://i.postimg.cc/Z5MZYjfd/Kakao-Talk-Photo-2021-05-08-02-46-54-5.png",
+    "https://i.postimg.cc/yYnst7cn/Kakao-Talk-Photo-2021-05-08-02-46-54-4.png",
+    "https://i.postimg.cc/zGB814kN/Kakao-Talk-Photo-2021-05-08-02-46-54-3.png",
+    "https://i.postimg.cc/mkyBbsqL/Kakao-Talk-Photo-2021-05-08-02-46-54-1.png",
+    "https://i.postimg.cc/jdRRMDwL/Kakao-Talk-Photo-2021-05-08-02-46-54-6.png",
+    "https://i.postimg.cc/c1Rs7RJp/Kakao-Talk-Photo-2021-05-08-02-46-54-7.png",
   ];
   return (
     <div css={style}>
@@ -28,51 +32,29 @@ const Portfolio = () => {
       <div className="portGrid">
         <Dialog
           visible={toggle}
-          title="hi"
-          subTitle="subtitle"
-          description="des"
+          title="우리은행 해커톤"
+          subTitle="React / Redux"
+          description="우리은행 해커톤에서 프론트엔드 분야를 맡았고 장려상을 수상했습니다."
+          url="https://github.com/woori-hippy/hippy_front"
         >
           <Slide easing="ease" transitionDuration="500">
-            <div className="each-slide">
-              <div style={{ backgroundImage: `url(${slideImages[0]})` }}>
-                <span>Slide 1</span>
+            {slideImages.map((url) => (
+              <div className="each-slide">
+                <div
+                  style={{
+                    backgroundImage: `url(${url})`,
+                    backgroundSize: "contain",
+                  }}
+                ></div>
               </div>
-            </div>
-            <div className="each-slide">
-              <div style={{ backgroundImage: `url(${slideImages[1]})` }}>
-                <span>Slide 2</span>
-              </div>
-            </div>
-            <div className="each-slide">
-              <div style={{ backgroundImage: `url(${slideImages[2]})` }}>
-                <span>Slide 3</span>
-              </div>
-            </div>
+            ))}
           </Slide>
         </Dialog>
         <Card
-          title="Test"
-          tag="react / node"
+          title="우리은행 해커톤"
+          tag="React / Redux"
           description="LEARN MORE"
-          imgUrl="https://cdn.pixabay.com/photo/2014/07/01/12/35/taxi-381233__340.jpg"
-          onClick={handleToggle}
-        />
-        <Card
-          title="Test"
-          description="LEARN MORE"
-          imgUrl="https://cdn.pixabay.com/photo/2017/01/17/17/05/spaghetti-1987454__340.jpg"
-          onClick={handleToggle}
-        />
-        <Card
-          title="Test"
-          description="LEARN MORE"
-          imgUrl="https://cdn.pixabay.com/photo/2017/10/27/15/12/geeks-2894621__340.jpg"
-          onClick={handleToggle}
-        />
-        <Card
-          title="Test"
-          description="LEARN MORE"
-          imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp1StBs4YAnkQrJV0FRCg5ETff69plaDMlgA&usqp=CAU"
+          imgUrl="https://i.postimg.cc/R0JmWf8b/Kakao-Talk-Photo-2021-05-08-02-46-54-2.png"
           onClick={handleToggle}
         />
       </div>

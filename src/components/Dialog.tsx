@@ -2,6 +2,7 @@
 import { jsx, css } from "@emotion/react";
 import { Fragment, MouseEventHandler } from "react";
 import { useTransition, animated } from "react-spring";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 export type DialogProps = {
   visible: boolean;
@@ -12,6 +13,7 @@ export type DialogProps = {
   cancellable?: boolean;
   cancelText: string;
   confirmText: string;
+  url?: string;
   onCancel?: () => void;
   onConfirm?: () => void;
 };
@@ -25,6 +27,7 @@ const Dialog = ({
   cancelText,
   confirmText,
   children,
+  url,
   onCancel,
   onConfirm,
 }: DialogProps) => {
@@ -80,6 +83,12 @@ const Dialog = ({
                 {title && <h2>{title}</h2>}
                 {subTitle && <h3>{subTitle}</h3>}
                 {description && <p>{description}</p>}
+                {url && (
+                  <a href={url}>
+                    <GitHubIcon fontSize="small" />
+                    <span className="link">Go Repogitory</span>
+                  </a>
+                )}
               </div>
             </div>
           </animated.div>
@@ -139,6 +148,16 @@ const whiteBox = css`
     font-size: 1rem;
     margin: 0;
     color: #868e96;
+  }
+  a {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+  }
+  .link {
+    margin-left: 0.5rem;
   }
 `;
 
