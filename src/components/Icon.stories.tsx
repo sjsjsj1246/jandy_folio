@@ -8,36 +8,37 @@ import {
   number,
   radios,
 } from "@storybook/addon-knobs";
-import Card, { CardProps } from "./Card";
+import Icon, { IconProps } from "./Icon";
 
 export default {
-  title: "components/Card",
-  component: Card,
+  title: "components/Icon",
+  component: Icon,
   decorators: [withKnobs],
 } as Meta;
 
-export const card = () => {
+export const icon = () => {
   const title = text("title", "카드");
-  const tag = text("tag", "tag");
-  const description = text("description", "카드 버튼");
   const size = radios(
     "size",
     { small: "small", medium: "medium", big: "big" },
     "medium"
   );
-  const imgUrl = "http://placeimg.com/640/480/any";
+  const description = text("description", "description");
   const disableDes = boolean("disableDes", false);
+  const imgUrl = text(
+    "imgUrl",
+    "https://i.postimg.cc/NLq5QnB1/React-js-logo-512.png"
+  );
   return (
-    <Card
+    <Icon
       title={title}
-      tag={tag}
-      description={description}
       size={size}
-      imgUrl={imgUrl}
+      description={description}
       disableDes={disableDes}
+      imgUrl={imgUrl}
     />
   );
 };
-card.story = {
+icon.story = {
   name: "Default",
 };

@@ -2,12 +2,18 @@
 import { jsx, css } from "@emotion/react";
 import styled from "@emotion/styled";
 
-type IconProps = {
+export type IconProps = {
+  /**아이콘 제목입니다. */
   title?: string;
+  /**아이콘 사이즈입니다. */
   size: "small" | "medium" | "big";
+  /**아이콘 기본 배경색입니다. */
   backgroundColor?: string;
+  /**아이콘 배경 이미지 주소입니다. */
   imgUrl?: string;
+  /**아이콘 설명입니다. */
   description?: string;
+  /**true시에 아이콘 설명을 띄우지 않습니다. */
   disableDes?: boolean;
 };
 
