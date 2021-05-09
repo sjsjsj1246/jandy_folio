@@ -10,7 +10,7 @@ export type DialogProps = {
   subTitle?: string;
   description?: string;
   children?: React.ReactNode;
-  cancellable?: boolean;
+  cancelLable?: boolean;
   cancelText: string;
   confirmText: string;
   url?: string;
@@ -23,7 +23,7 @@ const Dialog = ({
   title,
   subTitle,
   description,
-  cancellable,
+  cancelLable,
   cancelText,
   confirmText,
   children,
