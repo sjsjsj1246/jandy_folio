@@ -3,14 +3,22 @@ import { jsx, css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { MouseEventHandler } from "react";
 
-type CardProps = {
+export type CardProps = {
+  /**카드의 제목 */
   title?: string;
+  /**카드의 태그 또는 부제목 */
   tag?: string;
-  size: "small" | "medium" | "big";
-  backgroundColor?: string;
-  imgUrl?: string;
+  /**카드 버튼의 텍스트 */
   description?: string;
+  /**카드의 크기 */
+  size: "small" | "medium" | "big";
+  /**카드의 배경 색 */
+  backgroundColor?: string;
+  /**카드의 배경 이미지 주소 */
+  imgUrl?: string;
+  /**카드의 설명을 띄우지 않기 */
   disableDes?: boolean;
+  /**카드의 버튼을 눌렀을 때 이벤트*/
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
@@ -54,8 +62,8 @@ const style = css`
 
 const sizes = {
   small: css`
-    width: 70px;
-    height: 70px;
+    width: 10rem;
+    height: 7rem;
   `,
   medium: css`
     width: 20rem;
@@ -68,8 +76,8 @@ const sizes = {
     }
   `,
   big: css`
-    width: 130px;
-    height: 130px;
+    width: 30rem;
+    height: 21rem;
   `,
 };
 
