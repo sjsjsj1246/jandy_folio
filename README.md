@@ -9,6 +9,7 @@
 - 언어 : Typescript
 - 라이브러리 :
   - React
+  - Material-ui
   - emotion
 - 디자인 시스템 : StoryBook
 
