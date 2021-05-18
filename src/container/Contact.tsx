@@ -1,7 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from "@emotion/react";
 import Heading from "../components/Heading";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaGithub,
+} from "react-icons/fa";
 import { FormEventHandler, useEffect, useRef } from "react";
 import emailjs, { init } from "emailjs-com";
 
@@ -50,6 +55,13 @@ const Contact = () => {
         <input type="submit" className="submit" value="Submit" />
       </form>
       <div className="contactList">
+        <a
+          href="https://github.com/sjsjsj1246"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaGithub className="icon" />
+        </a>
         <a
           href="https://www.facebook.com/profile.php?id=100010845521664"
           target="_blank"

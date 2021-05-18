@@ -71,21 +71,15 @@ const About = () => {
       title: "Back End",
       stack: [
         {
-          title: "Node",
-          des: "tried",
-          imgURL:
-            "https://i.postimg.cc/QtJGyjGL/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6261746e30353030302f696d6167652f75706c6f61642f.png",
-        },
-        {
           title: "Express",
           des: "tried",
           imgURL: "https://i.postimg.cc/xT08Kr6h/Express.png",
         },
-        // {
-        //   title: "Koa",
-        //   des: "tried",
-        //   imgURL: "https://i.postimg.cc/CxxxXW18/koa.png",
-        // },
+        {
+          title: "Koa",
+          des: "tried",
+          imgURL: "https://i.postimg.cc/CxxxXW18/koa.png",
+        },
       ],
     },
     {
